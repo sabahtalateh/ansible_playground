@@ -3,3 +3,4 @@
 ._*
 group_vars/all.yml
 vagrant_machines/group_vars/all.yml
+/.idea/

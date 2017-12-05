@@ -1,0 +1,13 @@
+---
+- hosts: zone1
+  tasks: 
+    - name: disable password auth via ssh
+      lineinfile: path=/etc/ssh/sshd_config regexp='^PasswordAuthentication' line='PasswordAuthentication no'
+      notify:
+        - reload sshd
+      become: true
+
+  handlers:
+    - name: reload sshd
+      service: name=ssh state=restarted
+      become: true

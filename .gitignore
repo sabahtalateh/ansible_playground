@@ -1,8 +1,4 @@
-.vagrant
-._.DS_Store
 .DS_Store
-._playbook.yml
 .vagrant
-._Vagrantfile
 vagrant_machines/group_vars/all.yml
 ._*

@@ -1,0 +1,4 @@
+- hosts: zone1
+  tasks:
+    - name: set /tmp/hosts attributes
+      file: path=/tmp/hosts mode=0777

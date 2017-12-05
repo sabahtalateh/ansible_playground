@@ -6,7 +6,7 @@
       become: true
 
     - name: create user {{user}}
-      user: name={{user}} shell=/bin/bash generate_ssh_key=yes ssh_key_file=.ssh/id_rsa state=present ssh_key_bits=2048
+      user: name={{user}} group=sudo shell=/bin/bash generate_ssh_key=yes ssh_key_file=.ssh/id_rsa state=present ssh_key_bits=2048 password=$6$gNUVDT8of4BNBB$mO5jO7A.nJEhfw5k7n0dY3PyzUiwd76DewluPcOK1lwBYpGpUGtinJJSpPjAvdxkTiz.IOKjlcUmpI2Z58Yz70
       become: true
 
     - name: add ssh keys

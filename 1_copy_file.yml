@@ -1,0 +1,4 @@
+- hosts: zone1:zone2
+  tasks:
+    - name: copy /etc/hosts to /tmp/hosts
+      copy: src=/etc/hosts dest=/tmp/hosts

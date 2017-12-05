@@ -1,0 +1,6 @@
+zone1:
+  ansible_user: some_user
+
+zone2:
+  ansible_user: some_user
+  

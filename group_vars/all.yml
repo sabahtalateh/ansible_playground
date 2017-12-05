@@ -1,6 +1,0 @@
-zone1:
-  ansible_user: sabahtalateh
-
-zone2:
-  ansible_user: sabahtalateh
-  

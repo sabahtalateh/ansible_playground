@@ -1,3 +1,0 @@
-# username and ssh key to authorize 
-user:     some_user
-ssh_pub:  /home/some_user/.ssh/id_rsa.pub

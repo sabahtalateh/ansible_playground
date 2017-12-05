@@ -5,3 +5,4 @@
 .vagrant
 ._Vagrantfile
 vagrant_machines/group_vars/all.yml
+._*

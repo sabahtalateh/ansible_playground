@@ -1,4 +1,5 @@
 .DS_Store
 .vagrant
-vagrant_machines/group_vars/all.yml
 ._*
+group_vars/all.yml
+vagrant_machines/group_vars/all.yml

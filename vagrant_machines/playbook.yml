@@ -1,0 +1,22 @@
+---
+- hosts: all
+  tasks:
+    - name: instal htop
+      apt: name=htop state=latest
+      become: true
+
+    - name: create user {{user}}
+      user: name={{user}} shell=/bin/bash
+      become: true
+
+    - name: add ssh keys
+      authorized_key: user={{user}} state=present key="{{ lookup('file', '{{ssh_pub}}') }}"
+      become: true
+
+    - name: disable password auth via ssh
+      lineinfile: path=/etc/ssh/sshd_config regexp='^PasswordAuthentication' line='PasswordAuthentication no'      
+      become: true
+
+    - name: restart ssh
+      service: name=ssh state=restarted
+      become: true
